@@ -1,0 +1,76 @@
+.myrows{
+  border: 3px solid black;
+  padding: 5px;
+}
+.mycols{
+  border: 3px solid red;
+}
+.mycontainer{
+  background-color: aqua;
+}
+#topHeader{
+  border-bottom: 1px solid #ebebeb;
+}
+#bottomHeader{
+  border-bottom: 1px solid #ebebeb;
+}
+#topHeader a{
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.89rem;
+}
+#topHeader a:hover{
+  color: crimson;
+  font-size: 0.96rem;
+}
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+.nav-item {
+  margin-left: 20px; /* Adjust this value as needed */
+  text-decoration-color: black;
+}
+nav ul li a {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.nav-link {
+  color: rgb(166, 166, 175);
+}
+
+.top-footer a{
+  color: black
+}
+a.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+.smaller-image {
+  max-width: 100%; /* Ensure the image does not exceed its original size */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 43px; /* Limit the maximum height of the image */
+}
+.bottom-footer {
+  background-color: grey;
+}
+.bottom-footer p{
+  color: white;
+  text-align: center;
+}
+
+.top-hero-section {
+  background-color: #130f40;
+  color: white;
+}
+.top-hero-section a{
+  font-weight: 600;
+  color: white;
+}
+
+.qualities-img {
+  width: 200px;
+}
+.full-footer {
+  background-color: #f7f1e3;
+}
