@@ -74,3 +74,24 @@ a.no-underline {
 .full-footer {
   background-color: #f7f1e3;
 }
+.requirements-section {
+  background-color: #dcdde1;
+}
+.home-newsletter {
+  background-color: #dcdde1;
+}
+
+.home-newsletter .form-control {
+  height: 50px;
+  border-radius: 20px 0 0 20px;
+}
+
+.home-newsletter .btn {
+  height: 50px;
+  border-radius: 0 20px 20px 0;
+  background-color: #fed330;
+}
+
+.Companies-section {
+  background-color: #dcdde1;
+}
