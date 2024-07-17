@@ -11,6 +11,58 @@
   --max-width: 1200px;
 }
 
+/* Style the search results container */
+#search-results {
+  position: absolute; /* Change to absolute positioning */
+  top: 20%; /* Position below the search box */
+  left: 40%; /* Align to the left of the search box */
+  background-color: var(--white); /* Background color for the container */
+  border: 1px solid #cccccc; /* Light gray border for visibility */
+  padding: 10px; /* Padding inside the container */
+  max-width: 300px; /* Maximum width of the container */
+  max-height: 400px; /* Maximum height of the container */
+  overflow-y: auto; /* Scrollable if content overflows */
+  z-index: 1000; /* Ensure it's on top of other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Shadow for better visibility */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  font-family: "Poppins", sans-serif; /* Consistent font style */
+  display: none; /* Hide by default; show when needed */
+}
+
+/* Style individual search result items */
+#search-results div {
+  margin-bottom: 10px; /* Space between search result items */
+  padding: 10px; /* Padding inside each result */
+  border-bottom: 1px solid #eeeeee; /* Divider between results */
+}
+
+/* Style the title of each search result */
+#search-results strong {
+  display: block; /* Ensure the title stands out */
+  margin-bottom: 5px; /* Space below the title */
+  color: var(--primary-color); /* Primary color for the title */
+  font-weight: 600; /* Bold text for emphasis */
+}
+
+/* Style the snippet or description in each search result */
+#search-results p {
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Font size for the snippet */
+  color: var(--text-dark); /* Darker text color for readability */
+}
+
+/* Style the links within search results */
+#search-results a {
+  color: var(--primary-color); /* Primary color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+#search-results a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -399,7 +451,7 @@ html {
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
   cursor: pointer;
-  font-size: x-small;
+  font-size: small;
   color: white;
   max-width: 500px;
 }
@@ -486,7 +538,7 @@ html {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 5rem;
-  font-size: x-small;
+  font-size: small;
 }
 
 .about_content p {
@@ -520,7 +572,7 @@ html {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 5rem;
-  font-size: x-small;
+  font-size: small;
   color: white;
 }
 
@@ -566,7 +618,7 @@ html {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem;
-  font-size: x-small;
+  font-size: small;
   color: white;
 }
 
@@ -693,6 +745,51 @@ html {
   background: black; /* Darker color on hover */
 }
 
+/* background */
+
+.background_container {
+  background-image: linear-gradient(
+      to right,
+      rgba(83,68,85, 0.9),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../imgs/TechPics/technology-7111752_1920.jpg");
+  gap: 2rem;
+  align-items: center;
+}
+
+.background_content{
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 5rem;
+  font-size: small;
+  color: white;
+}
+
+.background_content span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* Adjust the icon size */
+  color: white;
+  background: transparent; /* Background color of the span */
+  border-radius: 50%; /* Set a fixed height */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9); /* Box shadow for the span */
+  padding: 5px; /* Add padding inside the span */
+  overflow: hidden; /* Hide overflow */
+  text-align: center;
+}
+
+.background img{
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.background_content span i {
+  font-size: 1rem; /* Adjust the icon size inside the span */
+}
+
 /* footer */
 
 .footer {
@@ -725,7 +822,7 @@ html {
 }
 
 .footer_col a{
-  font-size: xx-small;
+  font-size: small;
 }
 
 .footer_col p {
@@ -733,7 +830,7 @@ html {
   color: var(--text-dark);
   cursor: pointer;
   transition: 0.3s;
-  font-size: xx-small;
+  font-size: x-small;
 }
 
 .footer_col p:hover {

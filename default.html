@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- For Remix Icon -->
@@ -42,14 +41,18 @@
                   <a class="nav-link" href="#footer-contact">Contact Us</a>
                 </li>
               </ul>
-              <div class="search-container">
-                <form class="d-flex searchBar p-4" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit"><span><i class="fa-solid fa-magnifying-glass"></i></span></button>
-                </form>
+                <div class="search-container">
+                  <div id="search-results" style="display: none;"></div>
+                  <form id="search-form" class="d-flex searchBar p-4" role="search">
+                      <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button id="search-button" class="btn btn-outline-success" type="button">
+                          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                      </button>
+                  </form>
+              </div>
               </div>
             </div>
-          </div>
+</div>
         </nav>
         <div class="section header_container">
           <div class="header_content header_logo">
@@ -63,14 +66,23 @@
             </p>
           </div>
           <div class="header_form">
-            <form>
+            <form id="contactForm" method="post" action="send_email.php">
               <h4>Let's Connect</h4>
-              <input type="text" placeholder="Full Name" />
-              <input type="text" placeholder="Email Address" />
-              <input type="text" placeholder="Phone No." />
-              <textarea type="text" name="message" placeholder="Your Message" rows="5" required></textarea>
+              <div>
+                  <input type="text" id="fullName" name="fullName" placeholder="Full Name" required />
+              </div>
+              <div>
+                  <input type="email" id="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div>
+                  <input type="tel" id="phone" name="phone" placeholder="Phone No." />
+              </div>
+              <div>
+                  <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              </div>
               <button type="submit" class="btn form_btn">Send Message</button>
-            </form>
+          </form>
+          
           </div>
     </div>
     </div>
@@ -142,7 +154,7 @@
     </div>
   </section>
 
-  <section class="section why_container">
+  <section class="section why_container" id="why-choose-us">
     <div class="content_image">
       <img src="imgs/TechPics/coding-1853305_1920.jpg" alt="why choose us" />
     </div>
@@ -233,61 +245,107 @@
             </div>
         </div>
     </div>
-</section>
+  </section>
 
-<footer class="footer" id="footer">
-  <div class="section footer_container" id="footer">
-    <div class="footer_col">
+  <section class="section background_container" id="why-choose-us">
+    
+    <div class="background_content">
       <center>
-        <a href="default.html"><img src="imgs/websiteLogo.png" class="img-fluid footer_logo" alt=""></a>
+        <h2 class="section_header">Background</h2>
+      <p>
+        I'm excited to share a glimpse into my educational and professional journey
+      </p>
       </center>
+      
+      <div>
+        <h4>High School -<span><i class="fa-solid fa-school"></i></span></h4>
+        <p>
+          I embarked on my academic path at <strong>Dordrecht High School</strong>, where I built a strong foundation through a diverse curriculum and active involvement in school activities.
+        </p>
+      </div>
+      <div>
+        <h4>University -<span><i class="fa-solid fa-user-graduate"></i></span></h4>
+        <p>
+          I continued my education at <strong>Nelson Mandela University</strong>, where I pursued a study on <strong>Software Development</strong>. My experience at university was enriching and transformative, as I delved into creating projects.
+        </p>
+      </div>
+      <div>
+        <h4>Professional -<span><i class="fa-solid fa-user-tie"></i></span></h4>
+        <p>
+          Upon completing my studies, I joined the <strong>National Institute for Occupational Health (NIOH)</strong> as an Intern Analyst Developer. During my internship, I had the opportunity to work on various projects that involved Managing Queries, Help Desk and Research Committee projects. This experience allowed me to apply my academic knowledge in a practical setting, develop my technical skills, and gain valuable insights into the field of software development.
+        </p>
+      </div>
+      <hr>
+      <p>
+        These educational and professional experiences have profoundly shaped my career trajectory, equipping me with the expertise and passion I bring to my current endeavors. I invite you to explore the rest of the site to learn more about my work, projects, and achievements.
+      </p>
+
+      <center><h5 class="pt-4">Some of the companies I have worked for</h5></center>
     </div>
-    <div class="footer_col">
-      <h3>Value</h3>
-      <a>
-        Our website designs stand out because they combine the latest design trends with a deep understanding of user experience and technical excellence. We tailor each design to meet your specific needs and objectives, ensuring a seamless, visually stunning, and highly functional website.
-      </a>
-    </div>
-    <div class="footer_col">
-      <h4>Quick Access</h4>
-      <a href="default.html"><p>Home</p></a>
-      <a href="#about-us"><p>About Us</p></a>
-      <a href="services.html"><p>Services</p></a>
-    </div>
-    <div class="footer_col">
-      <h4>Contact Us</h4>
-      <a>
-        <span class="fa-solid fa-map-location-dot"></span><a target="_blank" href="https://maps.app.goo.gl/bRVNgibnfRtsUBVS7"> 41, Kruis Street, Dikole  Section</a>
-        <hr>
-        <div class="ratio ratio-21x9">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.731697791002!2d28.0453634!3d-26.2054048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e991c034d5b%3A0x723373d72e258b10!2s41%20Kruis%20St%2C%20Dikole%20Section%2C%20Johannesburg%2C%202107!5e0!3m2!1sen!2sza!4v1721027664058!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <hr>
-      </a>
-      <p><span class="fa fa-envelope"></span><a href="mailto: lihlethornmagidigidi@gmail.com"></a> lihlethornmagidigidi@gmail.com</p>
-      <p><span class="fa fa-phone"></span><a href="tel: +27721486861"></a> (+277) 2148 6861</p>
-    </div>
-  </div>
-  <div class="footer_bar" id="footer-contact">
-    <div class="footer_bar_content">
-      <p>Copyright © 2024 Lihle Magidigidi. All rights reserved.</p>
-      <div class="footer_socials">
-        <a href="https://www.instagram.com" target="_blank">
-          <span><i class="fab fa-instagram"></i></span>
-      </a>
-      <a href="https://www.facebook.com" target="_blank">
-          <span><i class="fab fa-facebook"></i></span>
-      </a>
-      <a href="https://www.twitter.com" target="_blank">
-          <span><i class="fab fa-twitter"></i></span>
-      </a>
-      <a href="mailto:lihlethornmagidigidi@gmail.com">
-          <span><i class="fas fa-envelope"></i></span>
-      </a>
+    <div class="row background align-items-center justify-content-center text-center">
+      <div class="col-md-6">
+        <img src="imgs/nioh_logo.fw_.png" class="img-fluid mx-auto d-block" alt="">
+      </div>
+      <div class="col-md-6">
+        <img src="imgs/AfrikaTikkun_logo-1.png" class="img-fluid mx-auto d-block" alt="">
       </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="section footer_container" id="footer">
+      <div class="footer_col">
+        <center>
+          <a href="default.html"><img src="imgs/websiteLogo.png" class="img-fluid footer_logo" alt=""></a>
+        </center>
+      </div>
+      <div class="footer_col">
+        <h3>Value</h3>
+        <a>
+          Our website designs stand out because they combine the latest design trends with a deep understanding of user experience and technical excellence. We tailor each design to meet your specific needs and objectives, ensuring a seamless, visually stunning, and highly functional website.
+        </a>
+      </div>
+      <div class="footer_col">
+        <h4>Quick Links</h4>
+        <a href="default.html"><p>Home</p></a>
+        <a href="#about-us"><p>About Us</p></a>
+        <a href="services.html"><p>Services</p></a>
+        <a href="https://github.com/ChamionSpy" target="_blank"><p>Github</p></a>
+      </div>
+      <div class="footer_col">
+        <h4>Contact Us</h4>
+        <a>
+          <span class="fa-solid fa-map-location-dot"></span><a target="_blank" href="https://maps.app.goo.gl/bRVNgibnfRtsUBVS7"> 41, Kruis Street, Dikole  Section</a>
+          <hr>
+          <div class="ratio ratio-21x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.731697791002!2d28.0453634!3d-26.2054048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e991c034d5b%3A0x723373d72e258b10!2s41%20Kruis%20St%2C%20Dikole%20Section%2C%20Johannesburg%2C%202107!5e0!3m2!1sen!2sza!4v1721027664058!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <hr>
+        </a>
+        <p><span class="fa fa-envelope"></span><a href="mailto: lihlethornmagidigidi@gmail.com"></a> lihlethornmagidigidi@gmail.com</p>
+        <p><span class="fa fa-phone"></span><a href="tel: +27721486861"></a> (+277) 2148 6861</p>
+      </div>
+    </div>
+    <div class="footer_bar" id="footer-contact">
+      <div class="footer_bar_content">
+        <p>Copyright © 2024 Stellar Design Technologies. All rights reserved.</p>
+        <div class="footer_socials">
+          <a href="https://www.instagram.com" target="_blank">
+            <span><i class="fab fa-instagram"></i></span>
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <span><i class="fab fa-facebook"></i></span>
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <span><i class="fab fa-twitter"></i></span>
+        </a>
+        <a href="mailto:lihlethornmagidigidi@gmail.com">
+            <span><i class="fas fa-envelope"></i></span>
+        </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
