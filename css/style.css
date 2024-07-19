@@ -670,13 +670,50 @@ html {
   cursor: pointer;
   overflow: hidden;
   flex: 0 0 auto;
-  width: 250px;
+  width: 200px;
+  height: 350px;
   position: relative;
+}
+
+.doctors_card a{
+  background-color: black;
+  border-radius: 20px;
+  padding: 8px 25px 8px 25px;
+}
+
+
+.features_list {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  font-size: x-small;
+}
+
+.features_list li {
+  text-align: left;
+  position: relative;
+  padding-left: 0rem; /* Space for the check mark */
+  margin-bottom: 5px; /* Spacing between list items */
+}
+
+.features_list li::before {
+  content: '\2714'; /* Unicode character for check mark */
+  color: green; /* Green color for the check mark */
+  position: relative;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  font-size: 12px; /* Size of the check mark */
 }
 
 .doctors_card_image {
   position: relative;
   overflow: hidden;
+  background-image: linear-gradient(
+      to right,
+      rgba(83,68,85, 0.5),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../imgs/TechPics/digital-8766933_1920.png");
 }
 
 .doctors_socials {
@@ -713,7 +750,7 @@ html {
 
 .doctors_card h4 {
   margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   font-weight: 600;
   color: var(--text-dark);
   padding: 1rem;
