@@ -464,25 +464,7 @@ html {
   border-radius: 10px;
 }
 
-#webDesign{
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.9),
-      rgba(83,68,85, 0.9)
-    ),
-    url("../imgs/TechPics/ai-generated-8362805_1920.jpg");
-}
-
-#webDevelopment{
-  background-image: linear-gradient(
-      to right,
-      rgba(83,68,85, 0.9),
-      rgba(0, 0, 0, 0.9)
-    ),
-    url("../imgs/TechPics/developer-8829735_1920.jpg");
-}
-
-#Maintenance{
+#staticWebsite{
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.9),
@@ -491,32 +473,24 @@ html {
     url("../imgs/TechPics/code-8779057_1920.jpg");
 }
 
-#uiDesign{
+#dynamicWebsite{
   background-image: linear-gradient(
       to right,
       rgba(83,68,85, 0.9),
       rgba(0, 0, 0, 0.9)
     ),
-    url("../imgs/TechPics/ai-generated-8165301_1920.jpg");
+    url("../imgs/TechPics/ai-generated-8362805_1920.jpg");
 }
 
-#seoOptimize{
+#EmailWebsite{
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.9),
       rgba(83,68,85, 0.9)
     ),
-    url("../imgs/TechPics/computer-8037838_1920.jpg");
+    url("../imgs/TechPics/developer-8829735_1920.jpg");
 }
 
-#responsiveDesign{
-  background-image: linear-gradient(
-      to right,
-      rgba(83,68,85, 0.9),
-      rgba(0, 0, 0, 0.9)
-    ),
-    url("../imgs/TechPics/computer-4795762_1920.jpg");
-}
 
 /* about section Home Page */
 
@@ -605,10 +579,10 @@ html {
 .doctors_container {
   background-image: linear-gradient(
       to right,
-      rgba(83,68,85, 0.9),
+      rgba(196, 191, 188, 0.9),
       rgba(0, 0, 0, 0.9)
     ),
-    url("../imgs/TechPics/ai-generated-8513951_1920.jpg");
+    url("../imgs/TechPics/technology-8676540_1920.jpg");
   gap: 2rem;
   align-items: center;
   overflow: hidden;
@@ -659,7 +633,7 @@ html {
   overflow-x: auto; /* Enable horizontal scrolling */
   scroll-behavior: smooth; /* Smooth scrolling */
   gap: 2rem;
-  padding: 1rem 1rem; /* Add horizontal padding */
+  padding: 1rem 10rem; /* Add horizontal padding */
   /* Optionally, add padding-top and padding-bottom if needed */
 }
 
@@ -671,7 +645,7 @@ html {
   overflow: hidden;
   flex: 0 0 auto;
   width: 200px;
-  height: 350px;
+  height: 300px;
   position: relative;
 }
 
@@ -679,6 +653,10 @@ html {
   background-color: black;
   border-radius: 20px;
   padding: 8px 25px 8px 25px;
+}
+
+.doctors_card p {
+  padding: 10px;
 }
 
 
@@ -708,12 +686,7 @@ html {
 .doctors_card_image {
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(
-      to right,
-      rgba(83,68,85, 0.5),
-      rgba(0, 0, 0, 0.9)
-    ),
-    url("../imgs/TechPics/digital-8766933_1920.png");
+  background-color: black;
 }
 
 .doctors_socials {
@@ -765,7 +738,7 @@ html {
 }
 /* WebKit scrollbars */
 .doctors_grid::-webkit-scrollbar {
-  width: 30px; /* Width of the scrollbar */
+  width: 30px;
 }
 
 .doctors_grid::-webkit-scrollbar-track {
