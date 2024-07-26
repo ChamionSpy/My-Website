@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stellar Design | Services</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">
-  <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stellar Design | Services</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- For Remix Icon -->
-  <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
-</head>
-<body>
-  <header>
-    <div id="bottomHeader">
+    <!-- For Remix Icon -->
+    <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
+  </head>
+  <body>
+    <header>
+      <div id="topHeader">
         <nav class="section nav_container navbar navbar-expand-lg p-1">
-          
           <div class="container-fluid justify-content-md-start">
-            
             <a class="navbar-brand" href="default.html"><div class="nav_logo p-4"><img src="imgs/websiteLogo.png" class="img-fluid" alt=""></div></a>
             <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="toggle-btn">Menu</span>
@@ -31,215 +29,240 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="services.html">Services</a>
                 </li>
-                </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#our-doctors">Pricing</a>
+                  <a class="nav-link" href="#our-pricings">Pricing</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#footer-contact">Contact Us</a>
                 </li>
               </ul>
-              <div class="search-container">
-                <form class="d-flex searchBar p-4" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit"><span><i class="fa-solid fa-magnifying-glass"></i></span></button>
-                </form>
+                <div class="search-container">
+                  <div id="search-results" style="display: none;"></div>
+                  <form id="search-form" class="d-flex searchBar p-4" role="search">
+                      <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button id="search-button" class="btn btn-outline-success" type="button">
+                          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                      </button>
+                  </form>
               </div>
-            </div>
+              </div>
           </div>
         </nav>
-          <div class="service_headers">
-            <div class="service_header_contents p-4">
-              <center style="color: white;">
-              <h1 style="font-family: Arial, Helvetica;">How Can We Help You?</h1>
+      </div>
+      </div>
+    </header>
+
+    <section class="section service_container" id="services">
+      <div class="row">
+        <div class="col-md-12">
+          <center>
+            <h3>OUR SERVICES</h3>
+          </center>
+        </div>
+      </div>
+      <div class="row p-4 service_homePage">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+              <center>
+                <a href="#siglePageWebsite"><i class="fa-regular fa-window-maximize"></i>
+                  <p>Single Page Website</p></a>
               </center>
             </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+              <center>
+                <a href="#staticWebsite"><i class="fa-solid fa-paintbrush"></i>
+                  <p>Static Website</p></a>
+              </center>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+              <center>
+                <a href="#EmailWebsite"><i class="fa-solid fa-envelope"></i>
+                  <p>Email Service Website</p></a>
+              </center>
+            </div>
+      </div>
+    </section>
+
+    <section class="section_containers servicePage_container p-4" id="siglePageWebsite">
+      <div class="row">
+        <div class="col-md-5 singlePageWebsiteContent">
+          <div class="service_content">
+            <h2 class="section_header">Single Page Website</h2>
+            <strong>Reliable Single Page Website</strong>
+            <br><br>
+            <p>A responsive sigle page website is like a digital brochure where the content on each page is fixed and doesn’t change unless someone manually updates it. It’s made up of separate, unchanging files, so you cannot interact with it or get different content based on your actions.</p>
           </div>
         </div>
-    </div>
-  </header>
+        <div class="col-md-7">
+          <div class="service_image">
+            <img src="imgs/TechPics/code-8779047_1920.jpg" class="img-fluid" alt="about" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="section service_container" id="services">
-      <center>
-        <h3>OUR SERVICES</h3>
-      </center>
-      <div class="container p-4">
-        <div class="row p-4">
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+    <section class="section_containers servicePage_container2 p-4" id="staticWebsite">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="service_image">
+            <img src="imgs/TechPics/ai-generated-8362805_1920.jpg" class="img-fluid" alt="about" />
+          </div>
+        </div>
+        <div class="col-md-5 staticWebsiteContent">
+          <div class="service_content">
+            <h2 class="section_header">Static Website</h2>
+            <strong>Innovative UI/UX Design</strong>
+            <br><br>
+            <p>A fully responsive static website is like an interactive app where the content changes based on what you do. It’s designed to react and adapt to user input.</p>
+            <p>
+              We combine aesthetic appeal with functional excellence to ensure your digital products are not only beautiful but also easy and enjoyable to use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section_containers servicePage_container p-4" id="EmailWebsite">
+      <div class="row">
+        <div class="col-md-5 emailServiceWebsiteContent">
+          <div class="service_content">
+            <h2 class="section_header">Email Service Website</h2>
+            <strong>Effective Email Optimization</strong>
+            <br><br>
+            <p>A Fully Responsive static website that lets users send emails directly through the site. It has features for composing and sending. Instead of using a separate email app, you can revieve your emails right from the website.</p>
+            <p>
+              We help you attract more visitors and convert them into customers by ensuring your site performs at its best in search results
+            </p>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="service_image">
+            <img src="imgs/TechPics/developer-8829735_1920.jpg" class="img-fluid" alt="about" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricings_container" id="our-pricings">
+      <div class="pricing_content">
+          <div class="pricings_header">
+              <div class="pricings_header_content">
+                  <h2 class="section_header">Pricing</h2>
+                  <p>Explore some of our prices showcasing our web design and development expertise. These prices include web design, web developing, custom domain name and hosting services</p>
+              </div>
+          </div>
+          <!-- <div class="pricings_nav">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right"></i></span>
+          </div> -->
+          <div class="pricings_grid">
+            <div class="pricings_card">
+              <div class="pricings_card_image">
+                <h4>Single Page Website</h4>
+              </div>
+              <p><strong style="font-size: large;">R153 </strong>per month</p>
+              <h4>Custom Features</h4>
+              <ul class="features_list">
+                <li>Mobile Responsive</li>
+                <li>SEO-friendly</li>
+              </ul>
+              <a href="default.html">Get Started</a>
+            </div>
+            <div class="pricings_card">
+              <div class="pricings_card_image">
+                <h4>Static Website</h4>
+              </div>
+              <p><strong style="font-size: large;">R180 </strong> per month</p>
+              <h4>Custom Features</h4>
+              <ul class="features_list">
+                <li>Interactive Features</li>
+                <li>Up to 5 pages</li>
+              </ul>
+              <a href="default.html">Get Started</a>
+            </div>
+            <div class="pricings_card">
+              <div class="pricings_card_image">
+                <h4>Email Service Website</h4>
+              </div>
+              <p><strong style="font-size: large;">R287 </strong>per month</p>
+              <h4>Custom Features</h4>
+              <ul class="features_list">
+                <li>Contact Forms</li>
+                <li>Email Notifications</li>
+              </ul>
+              <a href="default.html">Get Started</a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="section footer_container" id="footer">
+        <div class="row">
+          <div class="footer_col col-md-3">
             <center>
-              <a href="#Maintenance"><i class="fa-regular fa-window-maximize"></i>
-                <p>Static Website</p></a>
+              <a href="default.html"><img src="imgs/websiteLogo.png" class="img-fluid footer_logo" alt=""></a>
             </center>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
-            <center>
-              <a href="#uiDesign"><i class="fa-solid fa-paintbrush"></i>
-                <p>Dynamic Website</p></a>
-            </center>
+          <div class="footer_col col-md-3">
+            <h3>Value</h3>
+            <a>
+              Whether you're a startup, small business, or established company looking to enhance your online presence, Stellar Design Technologies is here to help. Contact us today to schedule a consultation and learn more about how we can elevate your business with a stellar website.
+            </a>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
-            <center>
-              <a href="#seoOptimize"><i class="fa-solid fa-envelope"></i>
-                <p>Email Functionality Website</p></a>
-            </center>
+          <div class="footer_col col-md-3">
+            <h4>Quick Links</h4>
+            <a href="default.html"><p>Home</p></a>
+            <a href="#siglePageWebsite"><p>Single Page Website</p></a>
+            <a href="#staticWebsite"><p>Static Website</p></a>
+            <a href="#EmailWebsite"><p>Email Service Website</p></a>
+            <a href="#our-pricings"><p>Pricing</p></a>
+          </div>
+          <div class="footer_col col-md-3">
+            <h4>Contact Us</h4>
+            <a>
+              <span class="fa-solid fa-map-location-dot"></span><a target="_blank" href="https://maps.app.goo.gl/bRVNgibnfRtsUBVS7"> 41, Kruis Street, Dikole  Section</a>
+              <hr>
+              <div class="ratio ratio-21x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.731697791002!2d28.0453634!3d-26.2054048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e991c034d5b%3A0x723373d72e258b10!2s41%20Kruis%20St%2C%20Dikole%20Section%2C%20Johannesburg%2C%202107!5e0!3m2!1sen!2sza!4v1721027664058!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <hr>
+            </a>
+            <p><span class="fa fa-envelope"></span><a href="mailto: lihlethornmagidigidi@gmail.com"></a> lihlethornmagidigidi@gmail.com</p>
+            <p><span class="fa fa-phone"></span><a href="tel: +27721486861"></a> (+277) 2148 6861</p>
           </div>
         </div>
+        
       </div>
-      <center>
-        <button class="service_btn btn redirect-button" id="service_btn" data-target="#our-doctors">Head To Pricing</button>
-      </center>
-  </section>
-
-  <section class="section_containers servicePage_container p-4" id="staticWebsite">
-    <div class="service_content">
-      <h2 class="section_header">Static Website</h2>
-      <strong>Reliable Static Website</strong>
-      <br><br>
-      <p>A responsive static website is like a digital brochure where the content on each page is fixed and doesn’t change unless someone manually updates it. It’s made up of separate, unchanging files, so you can’t interact with it or get different content based on your actions.</p>
-    </div>
-    <div class="service_image">
-      <img src="imgs/TechPics/code-8779047_1920.jpg" class="img-fluid" alt="about" />
-    </div>
-  </section>
-
-  <section class="section_containers servicePage_container2 p-4" id="dynamicWebsite">
-    <div class="service_image">
-      <img src="imgs/TechPics/ai-generated-8362805_1920.jpg" class="img-fluid" alt="about" />
-    </div>
-    <div class="service_content">
-      <h2 class="section_header">Dynamic Website</h2>
-      <strong>Innovative UI/UX Design</strong>
-      <br><br>
-      <p>A fully responsive Dynamic website is like an interactive app where the content changes based on what you do. It pulls information from a database and updates in real-time, so you see different things depending on your actions, like searching for products or logging into your account. It’s designed to react and adapt to user input.</p>
-      <p>
-        We combine aesthetic appeal with functional excellence to ensure your digital products are not only beautiful but also easy and enjoyable to use.
-      </p>
-    </div>
-  </section>
-
-  <section class="section_containers servicePage_container p-4" id="EmailWebsite">
-    <div class="service_content">
-      <h2 class="section_header">Email Functionality Website</h2>
-      <strong>Effective SEO Optimization</strong>
-      <br><br>
-      <p>A Fully Responsive Dynamic website that lets you send emails directly through the site. It often has features for composing, sending, and organizing your emails. Instead of using a separate email app, you can revieve your emails right from the website.</p>
-      <p>
-        We help you attract more visitors and convert them into customers by ensuring your site performs at its best in search results
-      </p>
-    </div>
-    <div class="service_image">
-      <img src="imgs/TechPics/developer-8829735_1920.jpg" class="img-fluid" alt="about" />
-    </div>
-  </section>
-
-  <section class="section doctors_container" id="our-doctors">
-    <div class="doctor_content">
-        <div class="doctors_header">
-            <div class="doctors_header_content">
-                <h2 class="section_header">Pricing</h2>
-                <p>Explore some of our recent projects showcasing our web design and development expertise. These prices include web design, web developing, custom domain name and hosting services</p>
+      <div class="footer_bar" id="footer-contact">
+        <div class="row">
+          <div class="col-md-12 footerYear">
+            <div class="footer_bar_content">
+              <p>Copyright © 2024 Stellar Design Technologies. All rights reserved.</p>
             </div>
+          </div>
         </div>
-        <div class="doctors_nav">
-          <span><i class="fas fa-arrow-left"></i></span>
-          <span><i class="fas fa-arrow-right"></i></span>
-        </div>
-        <div class="doctors_grid">
-          <div class="doctors_card">
-            <div class="doctors_card_image">
-              <h4>Static Website</h4>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer_socials">
+              <a href="https://www.instagram.com" target="_blank">
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <span><i class="fab fa-facebook"></i></span>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <span><i class="fab fa-twitter"></i></span>
+            </a>
+            <a href="mailto:lihlethornmagidigidi@gmail.com">
+                <span><i class="fas fa-envelope"></i></span>
+            </a>
             </div>
-            <p><strong style="font-size: large;">R153 </strong>per month</p>
-            <h4>Custom Features</h4>
-            <ul class="features_list">
-              <li>Mobile Responsive</li>
-              <li>SEO-friendly</li>
-            </ul>
-            <a href="default.html">Get Started</a>
-          </div>
-          <div class="doctors_card">
-            <div class="doctors_card_image">
-              <h4>Dynamic Website</h4>
-            </div>
-            <p><strong style="font-size: large;">R180 </strong> per month</p>
-            <h4>Custom Features</h4>
-            <ul class="features_list">
-              <li>Interactive Features</li>
-              <li>Up to 5 pages</li>
-            </ul>
-            <a href="default.html">Get Started</a>
-          </div>
-          <div class="doctors_card">
-            <div class="doctors_card_image">
-              <h4>Email Functionality Website</h4>
-            </div>
-            <p><strong style="font-size: large;">R287 </strong>per month</p>
-            <h4>Custom Features</h4>
-            <ul class="features_list">
-              <li>Contact Forms</li>
-              <li>Email Notifications</li>
-            </ul>
-            <a href="default.html">Get Started</a>
           </div>
         </div>
-    </div>
-  </section>
+      </div>
+    </footer>
 
-  <footer class="footer" id="footer">
-    <div class="section footer_container" id="footer">
-      <div class="footer_col">
-        <center>
-          <a href="default.html"><img src="imgs/websiteLogo.png" class="img-fluid footer_logo" alt=""></a>
-        </center>
-      </div>
-      <div class="footer_col">
-        <h3>Value</h3>
-        <a>
-          Whether you're a startup, small business, or established company looking to enhance your online presence, Stellar Design Technologies is here to help. Contact us today to schedule a consultation and learn more about how we can elevate your business with a stellar website.
-        </a>
-      </div>
-      <div class="footer_col">
-        <h4>Quick Access</h4>
-        <a href="default.html"><p>Home</p></a>
-        <a href="services.html"><p>Services</p></a>
-      </div>
-      <div class="footer_col">
-        <h4>Contact Us</h4>
-        <a>
-          <span class="fa-solid fa-map-location-dot"></span><a target="_blank" href="https://maps.app.goo.gl/bRVNgibnfRtsUBVS7"> 41, Kruis Street, Dikole  Section</a>
-          <hr>
-          <div class="ratio ratio-21x9">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.731697791002!2d28.0453634!3d-26.2054048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e991c034d5b%3A0x723373d72e258b10!2s41%20Kruis%20St%2C%20Dikole%20Section%2C%20Johannesburg%2C%202107!5e0!3m2!1sen!2sza!4v1721027664058!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <hr>
-        </a>
-        <p><span class="fa fa-envelope"></span><a href="mailto: lihlethornmagidigidi@gmail.com"></a> lihlethornmagidigidi@gmail.com</p>
-        <p><span class="fa fa-phone"></span><a href="tel: +27721486861"></a> (+277) 2148 6861</p>
-      </div>
-    </div>
-    <div class="footer_bar" id="footer-contact">
-      <div class="footer_bar_content">
-        <p>Copyright © 2024 Lihle Magidigidi. All rights reserved.</p>
-        <div class="footer_socials">
-          <a href="https://www.instagram.com" target="_blank">
-            <span><i class="fab fa-instagram"></i></span>
-        </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <span><i class="fab fa-facebook"></i></span>
-        </a>
-        <a href="https://www.twitter.com" target="_blank">
-            <span><i class="fab fa-twitter"></i></span>
-        </a>
-        <a href="mailto:lihlethornmagidigidi@gmail.com">
-            <span><i class="fas fa-envelope"></i></span>
-        </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

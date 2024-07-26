@@ -281,6 +281,7 @@ html {
   width: 100%; /* Responsive width as a percentage of the container */
   height: auto; /* Maintain aspect ratio */
   align-items: center;
+  padding-top: 2rem;
 }
 
 
@@ -291,7 +292,7 @@ html {
   max-width: 300px;
 }
 
-.header_form form {
+#contactForm {
   display: grid;
   gap: 1rem;
   padding: 2rem;
@@ -352,6 +353,41 @@ html {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 5px;
+}
+
+.alert-box {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color); /* Green color for success */
+  color: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.alert-box.show {
+  display: block;
+}
+
+.alert-box button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 
@@ -419,13 +455,38 @@ html {
   padding: 4rem 4rem;
 }
 
+.service_homePage a:hover {
+  color: grey;
+  transition: 0.3s;
+}
+
+.service_homePage a i {
+  font-size: 24px; /* Adjust icon size */
+  margin-bottom: 0.5rem; /* Space between icon and text */
+}
 
 
 /* services Services Page */
 
+.pricings_btn {
+  padding: 0.75rem 1rem;
+  outline: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pricings_btn:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
 .servicePage_container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   align-items: center;
   background-color: rgb(182, 182, 182);
@@ -435,8 +496,6 @@ html {
 }
 
 .servicePage_container2{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   align-items: center;
   background-color: #D8D9D8;
@@ -456,6 +515,18 @@ html {
   max-width: 500px;
 }
 
+.singlePageWebsiteContent {
+  padding: 3rem;
+}
+
+.emailServiceWebsiteContent{
+  padding: 3rem;
+}
+
+.staticWebsiteContent{
+  padding: 3rem;
+}
+
 .service_image img{
   max-width: 80%;
   width: 100%;
@@ -464,7 +535,7 @@ html {
   border-radius: 10px;
 }
 
-#staticWebsite{
+#siglePageWebsite{
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.9),
@@ -473,7 +544,7 @@ html {
     url("../imgs/TechPics/code-8779057_1920.jpg");
 }
 
-#dynamicWebsite{
+#staticWebsite{
   background-image: linear-gradient(
       to right,
       rgba(83,68,85, 0.9),
@@ -495,8 +566,6 @@ html {
 /* about section Home Page */
 
 .about_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   background-color: #d1d1d1;
   background-image: linear-gradient(
       to right,
@@ -520,18 +589,22 @@ html {
   color: white;
 }
 
+.content_image {
+  width: 100%; /* Adjust width of the column as needed */
+  text-align: center;
+  align-items: center; /* Center align content within the column */
+}
+
 .content_image img {
-  max-width: 80%;
-  max-height: 80%;
+  display: block;
   margin: auto;
   border-radius: 10px;
 }
 
+
 /* Why Choos Us */
 
 .why_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   background-image: linear-gradient(
       to right,
       rgba(83,68,85, 0.9),
@@ -548,12 +621,6 @@ html {
   padding: 5rem 5rem;
   font-size: small;
   color: white;
-}
-
-.why_grid{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .why_content span {
@@ -574,12 +641,25 @@ html {
   font-size: 1.5rem; /* Adjust the icon size inside the span */
 }
 
+.why_image {
+  width: 100%; /* Adjust width of the column as needed */
+  text-align: center;
+  align-items: center;
+  padding-top: 10rem; /* Center align content within the column */
+}
 
-/* doctors */
-.doctors_container {
+.why_image img {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+
+/* pricings */
+.pricings_container {
   background-image: linear-gradient(
       to right,
-      rgba(196, 191, 188, 0.9),
+      rgba(196, 191, 188, 0.8),
       rgba(0, 0, 0, 0.9)
     ),
     url("../imgs/TechPics/technology-8676540_1920.jpg");
@@ -588,7 +668,7 @@ html {
   overflow: hidden;
 }
 
-.doctor_content {
+.pricing_content {
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem;
@@ -596,7 +676,7 @@ html {
   color: white;
 }
 
-.doctors_header {
+.pricings_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -604,12 +684,12 @@ html {
   color: white;
 }
 
-.doctors_header_content p {
+.pricings_header_content p {
   max-width: 600px;
   color: white
 }
 
-.doctors_nav {
+.pricings_nav {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -618,7 +698,7 @@ html {
   
 }
 
-.doctors_nav span {
+.pricings_nav span {
   padding: 5px 15px;
   font-size: 1rem;
   color: white;
@@ -627,7 +707,12 @@ html {
   border-radius: 10px;
 }
 
-.doctors_grid {
+.pricings_nav span:hover{
+  background-color: grey;
+  transition: 0.3s;
+}
+
+.pricings_grid {
   margin-top: 4rem;
   display: flex; /* Use flex for horizontal scrolling */
   overflow-x: auto; /* Enable horizontal scrolling */
@@ -637,9 +722,10 @@ html {
   /* Optionally, add padding-top and padding-bottom if needed */
 }
 
-.doctors_card {
+.pricings_card {
   text-align: center;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+  background-color: black;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
@@ -649,13 +735,18 @@ html {
   position: relative;
 }
 
-.doctors_card a{
-  background-color: black;
+.pricings_card a{
+  background-color: rgb(46, 44, 44);
   border-radius: 20px;
   padding: 8px 25px 8px 25px;
 }
 
-.doctors_card p {
+.pricings_card a:hover{
+  background-color: grey;
+  transition: 0.3s;
+}
+
+.pricings_card p {
   padding: 10px;
 }
 
@@ -683,13 +774,13 @@ html {
   font-size: 12px; /* Size of the check mark */
 }
 
-.doctors_card_image {
+.pricings_card_image {
   position: relative;
   overflow: hidden;
-  background-color: black;
+  background-color: rgb(22, 0, 21);
 }
 
-.doctors_socials {
+.pricings_socials {
   position: absolute;
   left: 0;
   bottom: -4rem;
@@ -702,7 +793,7 @@ html {
   transition: 0.5s;
 }
 
-.doctors_socials span {
+.pricings_socials span {
   display: inline-block;
   padding: 6px 12px;
   font-size: 1.5rem;
@@ -713,15 +804,15 @@ html {
   transition: 0.3s;
 }
 
-.doctors_socials span:hover {
+.pricings_socials span:hover {
   color: var(--secondary-color);
 }
 
-.doctors_card:hover .doctors_socials {
+.pricings_card:hover .pricings_socials {
   bottom: 2rem;
 }
 
-.doctors_card h4 {
+.pricings_card h4 {
   margin-top: 1rem;
   font-size: 0.6rem;
   font-weight: 600;
@@ -730,28 +821,28 @@ html {
   color: white;
 }
 
-.doctors_card p {
+.pricings_card p {
   margin-bottom: 1rem;
   color: var(--text-light);
   padding: 1rem;
   color: white;
 }
 /* WebKit scrollbars */
-.doctors_grid::-webkit-scrollbar {
+.pricings_grid::-webkit-scrollbar {
   width: 30px;
 }
 
-.doctors_grid::-webkit-scrollbar-track {
+.pricings_grid::-webkit-scrollbar-track {
   background: #e0e0e0; /* Background of the track */
   border-radius: 100px; /* Rounded corners */
 }
 
-.doctors_grid::-webkit-scrollbar-thumb {
+.pricings_grid::-webkit-scrollbar-thumb {
   background: grey; /* Color of the scrollbar */
   border-radius: 100px; /* Rounded corners */
 }
 
-.doctors_grid::-webkit-scrollbar-thumb:hover {
+.pricings_grid::-webkit-scrollbar-thumb:hover {
   background: black; /* Darker color on hover */
 }
 
@@ -807,8 +898,6 @@ html {
 }
 
 .footer_container {
-  display: grid;
-  grid-template-columns: 400px repeat(3, 1fr);
   gap: 2rem;
   max-width: var(--max-width);
 }
@@ -857,6 +946,8 @@ html {
 
 .footer_bar {
   background-color: var(--primary-color);
+  margin: auto;
+  padding: 0.5rem 1rem;
 }
 
 .footer_bar_content {
@@ -952,7 +1043,7 @@ html {
     text-align: left;
   }
 
-  .doctors_grid {
+  .pricings_grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
@@ -961,39 +1052,39 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .doctor_content {
+  .pricing_content {
     padding: 3rem; /* Reduce padding on smaller screens */
   }
 
-  .doctors_header {
+  .pricings_header {
     flex-direction: column; /* Stack header elements vertically */
     align-items: flex-start; /* Align items to the start */
   }
 
-  .doctors_nav {
+  .pricings_nav {
     position: relative; /* Change position to relative for better positioning */
     margin-top: 1rem; /* Add space above the nav buttons */
   }
 
-  .doctors_nav span {
+  .pricings_nav span {
     font-size: 0.9rem; /* Reduce font size */
     padding: 4px 10px; /* Adjust padding */
   }
 
-  .doctors_grid {
+  .pricings_grid {
     padding: 1rem; /* Less horizontal padding */
   }
 
-  .doctors_card {
+  .pricings_card {
     width: 250px; /* Slightly smaller card width */
   }
 
-  .doctors_socials {
+  .pricings_socials {
     bottom: -3rem; /* Adjust position to fit within card */
     gap: 1rem; /* Reduce gap between social icons */
   }
 
-  .doctors_socials span {
+  .pricings_socials span {
     font-size: 1.25rem; /* Smaller icon size */
   }
 }
@@ -1005,7 +1096,7 @@ html {
     padding: 0.5rem; /* Reduce padding */
   }
 
-  .header_form form {
+  #contactForm {
     gap: 0.5rem; /* Reduce gap between elements */
     padding: 0.5rem; /* Reduce padding */
   }
@@ -1047,31 +1138,31 @@ html {
     font-size: 1rem; /* Adjust font size for readability */
   }
 
-  .doctor_content {
+  .pricing_content {
     padding: 2rem; /* Further reduce padding */
     font-size: small; /* Adjust font size for smaller screens */
   }
 
-  .doctors_nav span {
+  .pricings_nav span {
     font-size: 0.8rem; /* Further reduce font size */
     padding: 3px 8px; /* Adjust padding */
   }
 
-  .doctors_grid {
+  .pricings_grid {
     gap: 1rem; /* Reduce the gap between cards */
     padding: 1rem; /* No padding */
   }
 
-  .doctors_card {
+  .pricings_card {
     width: 200px; /* Smaller card width */
   }
 
-  .doctors_socials {
+  .pricings_socials {
     bottom: -2rem; /* Further adjust position */
     padding: 0.25rem; /* Less padding */
   }
 
-  .doctors_socials span {
+  .pricings_socials span {
     font-size: 1rem; /* Smaller icon size */
   }
 }
@@ -1091,7 +1182,7 @@ html {
     padding: 0.25rem; /* Further reduce padding */
   }
 
-  .header_form form {
+  #contactForm  {
     gap: 0.25rem; /* Further reduce gap between elements */
     padding: 0.25rem; /* Further reduce padding */
   }
@@ -1121,12 +1212,12 @@ html {
 
   
 
-  .doctors_header {
+  .pricings_header {
     flex-direction: column;
     text-align: center;
   }
 
-  .doctors_grid {
+  .pricings_grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -1148,30 +1239,30 @@ html {
     margin: 10px 0;
   }
 
-  .doctor_content {
+  .pricing_content {
     padding: 1rem; /* Minimal padding */
     font-size: small; /* Ensure readability */
   }
 
-  .doctors_header {
+  .pricings_header {
     gap: 1rem; /* Reduced gap for smaller screens */
   }
 
-  .doctors_grid {
+  .pricings_grid {
     gap: 1rem; /* Reduce the gap between cards */
     padding: 1rem; /* No padding */
   }
 
-  .doctors_card {
+  .pricings_card {
     width: 100%; /* Full width for cards on very small screens */
   }
 
-  .doctors_socials {
+  .pricings_socials {
     bottom: -1rem; /* Further adjust position */
     gap: 0.5rem; /* Reduce gap between social icons */
   }
 
-  .doctors_socials span {
+  .pricings_socials span {
     font-size: 0.75rem; /* Smaller icon size */
     padding: 2px 6px; /* Adjust padding */
   }

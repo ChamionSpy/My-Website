@@ -1,327 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stellar Design</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">
-  <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stellar Design</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- For Remix Icon -->
-  <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
-</head>
-<body>
-  <header>
-    <div id="bottomHeader">
-        <nav class="section nav_container navbar navbar-expand-lg p-1">
-          
-          <div class="container-fluid justify-content-md-start">
-            
-            <a class="navbar-brand" href="default.html"><div class="nav_logo p-4"><img src="imgs/websiteLogo.png" class="img-fluid" alt=""></div></a>
-            <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="toggle-btn">Menu</span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav justify-content-start">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="default.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about-us">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#our-doctors">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#footer-contact">Contact Us</a>
-                </li>
+    <!-- For Remix Icon -->
+    <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "ZDpmnXT0WDx0o4IjJ",
+          });
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="topHeader">
+          <nav class="section nav_container navbar navbar-expand-lg p-1">
+            <div class="container-fluid justify-content-md-start">
+              <a class="navbar-brand" href="default.html"><div class="nav_logo p-4"><img src="imgs/websiteLogo.png" class="img-fluid" alt=""></div></a>
+              <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggle-btn">Menu</span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav justify-content-start">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="default.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#our-pricings">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#footer-contact">Contact Us</a>
+                  </li>
+                </ul>
+                  <div class="search-container">
+                    <div id="search-results" style="display: none;"></div>
+                    <form id="search-form" class="d-flex searchBar p-4" role="search">
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button id="search-button" class="btn btn-outline-success" type="button">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </button>
+                    </form>
+                </div>
+                </div>
+            </div>
+          </nav>
+      </div>
+      <div class="section header_container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="header_content header_logo">
+                <h1 class="">Welcome to</h1>
+                <h2>Stellar<span>Design</span><small style="font-size:medium;">Technologies</small></h2>
+                <p>
+                  Where creativity meets functionality. We specialize in crafting beautiful and effective websites tailored to your business needs. Our team of experienced designers and developers work closely with you to understand your goals and deliver solutions that exceed your expectations.
+                </p>
+                <p>
+                  Whether you need a new website or a redesign, we’re here to help you succeed online. Explore our work and see how we can transform your online presence.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="header_form">
+                  <div id="contactForm">
+                    <h4>Let's Connect</h4>
+                    <div>
+                        <input id="name" name="name" placeholder="Full Name" required />
+                        <span id="nameError" class="error"></span>
+                    </div>
+                    <div>
+                        <input id="email" name="email" type="email" placeholder="Email Address" required />
+                        <span id="emailError" class="error"></span>
+                    </div>
+                    <div>
+                        <input id="phone" name="phone" type="tel" placeholder="Phone No." pattern="\d{10}" />
+                        <span id="phoneError" class="error"></span>
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <span id="messageError" class="error"></span>
+                    </div>
+                    <button class="btn form_btn" onclick="sendMail()">Send Message</button>
+                </div>
+                <div id="alertBox" class="alert-box">
+                  <span id="alertMessage">Your message sent successfully!!</span>
+                  <button onclick="closeAlert()">×</button>
+                </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section service_container" id="services">
+        <div class="row">
+          <div class="col-md-12">
+            <center>
+              <h3>OUR SERVICES</h3>
+            </center>
+          </div>
+        </div>
+        <div class="row p-4 service_homePage">
+              <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+                <center>
+                  <a href="services.html"><i class="fa-regular fa-window-maximize"></i>
+                    <p>Single Page Website</p></a>
+                </center>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+                <center>
+                  <a href="services.html"><i class="fa-solid fa-paintbrush"></i>
+                    <p>Static Website</p></a>
+                </center>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
+                <center>
+                  <a href="services.html"><i class="fa-solid fa-envelope"></i>
+                    <p>Email Service Website</p></a>
+                </center>
+              </div>
+        </div>
+        <div class="row">
+          <center>
+            <button class="service_btn btn redirect-button" id="service_btn" data-target="services.html">Find Out More</button>
+          </center>
+        </div>
+    </section>
+
+    <section class="section about_container" id="about-us">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="about_content">
+            <h2 class="section_header">About Us</h2>
+            <p>
+              We specialize in crafting professional and functional websites tailored for businesses of all sizes. At Stellar Design Technologies, we believe in simplifying the process of getting online by offering hassle-free website solutions.
+            </p>
+            <p>
+              Our mission is to empower businesses with an online presence that enhances their brand and drives growth. We understand the importance of a well-designed website in today's digital landscape, and we're committed to making quality web design accessible and affordable.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 mx-auto p-2">
+          <div class="content_image">
+            <img src="imgs/TechPics/technology-8676540_1920.jpg" class="img-fluid" alt="about" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why_container" id="why-choose-us">
+      <div class="row">
+        <div class="col-md-5 mx-auto p-2">
+          <div class="why_image centered-content">
+            <img src="imgs/TechPics/coding-1853305_1920.jpg" class="img-fluid rounded mx-auto d-bloc" alt="why choose us" />
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="why_content">
+            <h2 class="section_header">Why Choose Us</h2>
+            <p>
+              we believe that a website is more than just a digital presence—it's your online business card, a marketing tool, and often, the first impression your customers have of your brand. Here's why choosing us for your web design and development needs will ensure you stand out from the competition
+            </p>
+            <span><i class="fa-solid fa-hand-holding-dollar"></i></span>
+            <div>
+              <h4>No Additional Fees</h4>
+              <p>
+                We do not charge for anything besides the monthly service feee, including website design, developing, domain name and even hosting services. We include the addition of specific features at no extra cost. Whether you need custom functionalities or unique features, our team is dedicated to accommodating your needs without surprising you with hidden fees.
+              </p>
+              </div>
+            <span><i class="fa-solid fa-wrench"></i></span>
+            <div>
+              <h4>Maintenance</h4>
+              <p>
+                We offer complimentary maintenance to ensure your website remains in top shape. Our team handles updates, fixes, and minor adjustments without additional cost, so you can focus on growing your business.
+              </p>
+            </div>
+            <span><i class="fa-brands fa-sketch"></i></span>
+            <div>
+              <h4>Design Aesthetics</h4>
+              <p>
+                Our designs are contemporary and tailored to your brand's identity. We use the latest trends and technologies to create visually appealing and user-friendly websites that capture attention and engage visitors.
+              </p>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricings_container" id="our-pricings">
+      <div class="pricing_content">
+          <div class="pricings_header">
+              <div class="pricings_header_content">
+                  <h2 class="section_header">Pricing</h2>
+                  <p>Explore some of our prices showcasing our web design and development expertise. These prices include web design, web developing, custom domain name and hosting services</p>
+              </div>
+          </div>
+          <div class="pricings_nav">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right"></i></span>
+          </div>
+          <div class="pricings_grid">
+            <div class="pricings_card">
+              <div class="pricings_card_image">
+                <h4>Single Page Website</h4>
+              </div>
+              <p><strong style="font-size: large;">R153 </strong>per month</p>
+              <h4>Custom Features</h4>
+              <ul class="features_list">
+                <li>Mobile Responsive</li>
+                <li>SEO-friendly</li>
               </ul>
-                <div class="search-container">
-                  <div id="search-results" style="display: none;"></div>
-                  <form id="search-form" class="d-flex searchBar p-4" role="search">
-                      <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button id="search-button" class="btn btn-outline-success" type="button">
-                          <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                      </button>
-                  </form>
-              </div>
-              </div>
+              <a href="#contactForm">Get Started</a>
             </div>
-</div>
-        </nav>
-        <div class="section header_container">
-          <div class="header_content header_logo">
-            <h1 class="">Welcome to</h1>
-            <h2>Stellar<span>Design</span></h2>
-            <p>
-              where creativity meets functionality. We specialize in crafting beautiful and effective websites tailored to your business needs. Our team of experienced designers and developers work closely with you to understand your goals and deliver solutions that exceed your expectations.
-            </p>
-            <p>
-              Whether you need a new website or a redesign, we’re here to help you succeed online. Explore our work and see how we can transform your online presence.
-            </p>
-          </div>
-          <div class="header_form">
-            <form id="contactForm" method="post" action="https://formspree.io/f/xrbzeopa">
-              <h4>Let's Connect</h4>
-              <div>
-                  <input type="text" id="fullName" name="fullName" placeholder="Full Name" required />
+            <div class="pricings_card">
+              <div class="pricings_card_image">
+                <h4>Static Website</h4>
               </div>
-              <div>
-                  <input type="email" id="email" name="email" placeholder="Email Address" required />
+              <p><strong style="font-size: large;">R180 </strong> per month</p>
+              <h4>Custom Features</h4>
+              <ul class="features_list">
+                <li>Interactive Features</li>
+                <li>Up to 5 pages</li>
+              </ul>
+              <a href="#contactForm">Get Started</a>
+            </div>
+            <div class="pricings_card">
+              <div class="pricings_card_image">
+                <h4>Email Service Website</h4>
               </div>
-              <div>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone No." />
-              </div>
-              <div>
-                  <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn form_btn">Send Message</button>
-          </form>
-          
+              <p><strong style="font-size: large;">R287 </strong>per month</p>
+              <h4>Custom Features</h4>
+              <ul class="features_list">
+                <li>Contact Forms</li>
+                <li>Email Notifications</li>
+              </ul>
+              <a href="#contactForm">Get Started</a>
+            </div>
           </div>
-    </div>
-    </div>
-  </header>
-
-  <section class="section service_container" id="services">
-      <center>
-        <h3>OUR SERVICES</h3>
-      </center>
-      <div class="container p-4">
-        <div class="row p-4">
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
-            <center>
-              <a href="#Maintenance"><i class="fa-regular fa-window-maximize"></i>
-                <p>Static Website</p></a>
-            </center>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
-            <center>
-              <a href="#uiDesign"><i class="fa-solid fa-paintbrush"></i>
-                <p>Dynamic Website</p></a>
-            </center>
-          </div>
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 p-2">
-            <center>
-              <a href="#seoOptimize"><i class="fa-solid fa-envelope"></i>
-                <p>Email Functionality Website</p></a>
-            </center>
-          </div>
-        </div>
       </div>
-      <center>
-        <button class="service_btn btn redirect-button" id="service_btn" data-target="services.html">Find Out More</button>
-      </center>
-  </section>
-  <section class="section about_container" id="about-us">
-    <div class="about_content">
-      <h2 class="section_header">About Us</h2>
-      <p>
-        We specialize in crafting professional and functional websites tailored for businesses of all sizes. At Stellar Design Technologies, we believe in simplifying the process of getting online by offering hassle-free website solutions.
-      </p>
-      <p>
-        Our mission is to empower businesses with an online presence that enhances their brand and drives growth. We understand the importance of a well-designed website in today's digital landscape, and we're committed to making quality web design accessible and affordable.
-      </p>
-    </div>
-    <div class="content_image">
-      <img src="imgs/TechPics/technology-8676540_1920.jpg" alt="about" />
-    </div>
-  </section>
+    </section>
 
-  <section class="section why_container" id="why-choose-us">
-    <div class="content_image">
-      <img src="imgs/TechPics/coding-1853305_1920.jpg" alt="why choose us" />
-    </div>
-    <div class="why_content">
-      <h2 class="section_header">Why Choose Us</h2>
-      <p>
-        we believe that a website is more than just a digital presence—it's your online business card, a marketing tool, and often, the first impression your customers have of your brand. Here's why choosing us for your web design and development needs will ensure you stand out from the competition
-      </p>
-      <span><i class="fa-solid fa-hand-holding-dollar"></i></span>
-      <div>
-        <h4>No Additional Fees</h4>
-        <p>
-          We do not charge for anything besides the monthly service feee, including website design, developing, domain name and even hosting services. We include the addition of specific features at no extra cost. Whether you need custom functionalities or unique integrations, our team is dedicated to accommodating your needs without surprising you with hidden fees.
-        </p>
-        </div>
-      <span><i class="fa-solid fa-wrench"></i></span>
-      <div>
-        <h4>Maintenance</h4>
-        <p>
-          We offer complimentary maintenance to ensure your website remains in top shape. Our team handles updates, fixes, and minor adjustments without additional cost, so you can focus on growing your business.
-        </p>
-      </div>
-      <span><i class="fa-brands fa-sketch"></i></span>
-      <div>
-        <h4>Design Aesthetics</h4>
-        <p>
-          Our designs are contemporary and tailored to your brand's identity. We use the latest trends and technologies to create visually appealing and user-friendly websites that capture attention and engage visitors.
-        </p>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section doctors_container" id="our-doctors">
-    <div class="doctor_content">
-        <div class="doctors_header">
-            <div class="doctors_header_content">
-                <h2 class="section_header">Pricing</h2>
-                <p>Explore some of our recent projects showcasing our web design and development expertise. These prices include web design, web developing, custom domain name and hosting services</p>
-            </div>
-        </div>
-        <div class="doctors_nav">
-          <span><i class="fas fa-arrow-left"></i></span>
-          <span><i class="fas fa-arrow-right"></i></span>
-        </div>
-        <div class="doctors_grid">
-          <div class="doctors_card">
-            <div class="doctors_card_image">
-              <h4>Static Website</h4>
-            </div>
-            <p><strong style="font-size: large;">R153 </strong>per month</p>
-            <h4>Custom Features</h4>
-            <ul class="features_list">
-              <li>Mobile Responsive</li>
-              <li>SEO-friendly</li>
-            </ul>
-            <a href="default.html">Get Started</a>
-          </div>
-          <div class="doctors_card">
-            <div class="doctors_card_image">
-              <h4>Dynamic Website</h4>
-            </div>
-            <p><strong style="font-size: large;">R180 </strong> per month</p>
-            <h4>Custom Features</h4>
-            <ul class="features_list">
-              <li>Interactive Features</li>
-              <li>Up to 5 pages</li>
-            </ul>
-            <a href="default.html">Get Started</a>
-          </div>
-          <div class="doctors_card">
-            <div class="doctors_card_image">
-              <h4>Email Functionality Website</h4>
-            </div>
-            <p><strong style="font-size: large;">R287 </strong>per month</p>
-            <h4>Custom Features</h4>
-            <ul class="features_list">
-              <li>Contact Forms</li>
-              <li>Email Notifications</li>
-            </ul>
-            <a href="default.html">Get Started</a>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- <section class="section background_container" id="why-choose-us">
-    
-    <div class="background_content">
-      <center>
-        <h2 class="section_header">Background</h2>
-      <p>
-        I'm excited to share a glimpse into my educational and professional journey
-      </p>
-      </center>
+    <!-- <section class="section background_container" id="why-choose-us">
       
-      <div>
-        <h4>High School-<span><i class="fa-solid fa-school"></i></span></h4>
-        <p>
-          I embarked on my academic path at <strong>Dordrecht High School</strong>, where I built a strong foundation through a diverse curriculum and active involvement in school activities.
-        </p>
-      </div>
-      <div>
-        <h4>University-<span><i class="fa-solid fa-user-graduate"></i></span></h4>
-        <p>
-          I continued my education at <strong>Nelson Mandela University</strong>, where I pursued a study on <strong>Software Development</strong>. My experience at university was enriching and transformative, as I delved into creating projects.
-        </p>
-      </div>
-      <div>
-        <h4>Professional-<span><i class="fa-solid fa-user-tie"></i></span></h4>
-        <p>
-          Upon completing my studies, I joined the <strong>National Institute for Occupational Health (NIOH)</strong> as an Intern Analyst Developer. During my internship, I had the opportunity to work on various projects that involved Managing Queries, Help Desk and Research Committee projects. This experience allowed me to apply my academic knowledge in a practical setting, develop my technical skills, and gain valuable insights into the field of software development.
-        </p>
-      </div>
-      <hr>
-      <p>
-        These educational and professional experiences have profoundly shaped my career trajectory, equipping me with the expertise and passion I bring to my current endeavors. I invite you to explore the rest of the site to learn more about my work, projects, and achievements.
-      </p>
-
-      <center><h5 class="pt-4">Some of the companies I have worked for</h5></center>
-    </div>
-    <div class="row background align-items-center justify-content-center text-center">
-      <div class="col-md-6">
-        <img src="imgs/nioh_logo.fw_.png" class="img-fluid mx-auto d-block" alt="">
-      </div>
-      <div class="col-md-6">
-        <img src="imgs/AfrikaTikkun_logo-1.png" class="img-fluid mx-auto d-block" alt="">
-      </div>
-    </div>
-  </section> -->
-
-  <footer class="footer" id="footer">
-    <div class="section footer_container" id="footer">
-      <div class="footer_col">
+      <div class="background_content">
         <center>
-          <a href="default.html"><img src="imgs/websiteLogo.png" class="img-fluid footer_logo" alt=""></a>
+          <h2 class="section_header">Background</h2>
+        <p>
+          I'm excited to share a glimpse into my educational and professional journey
+        </p>
         </center>
+        
+        <div>
+          <h4>High School-<span><i class="fa-solid fa-school"></i></span></h4>
+          <p>
+            I embarked on my academic path at <strong>Dordrecht High School</strong>, where I built a strong foundation through a diverse curriculum and active involvement in school activities.
+          </p>
+        </div>
+        <div>
+          <h4>University-<span><i class="fa-solid fa-user-graduate"></i></span></h4>
+          <p>
+            I continued my education at <strong>Nelson Mandela University</strong>, where I pursued a study on <strong>Software Development</strong>. My experience at university was enriching and transformative, as I delved into creating projects.
+          </p>
+        </div>
+        <div>
+          <h4>Professional-<span><i class="fa-solid fa-user-tie"></i></span></h4>
+          <p>
+            Upon completing my studies, I joined the <strong>National Institute for Occupational Health (NIOH)</strong> as an Intern Analyst Developer. During my internship, I had the opportunity to work on various projects that involved Managing Queries, Help Desk and Research Committee projects. This experience allowed me to apply my academic knowledge in a practical setting, develop my technical skills, and gain valuable insights into the field of software development.
+          </p>
+        </div>
+        <hr>
+        <p>
+          These educational and professional experiences have profoundly shaped my career trajectory, equipping me with the expertise and passion I bring to my current endeavors. I invite you to explore the rest of the site to learn more about my work, projects, and achievements.
+        </p>
+
+        <center><h5 class="pt-4">Some of the companies I have worked for</h5></center>
       </div>
-      <div class="footer_col">
-        <h3>Value</h3>
-        <a>
-          Whether you're a startup, small business, or established company looking to enhance your online presence, Stellar Design Technologies is here to help. Contact us today to schedule a consultation and learn more about how we can elevate your business with a stellar website.
-        </a>
-      </div>
-      <div class="footer_col">
-        <h4>Quick Links</h4>
-        <a href="default.html"><p>Home</p></a>
-        <a href="#about-us"><p>About Us</p></a>
-        <a href="services.html"><p>Services</p></a>
-        <a href="https://github.com/ChamionSpy" target="_blank"><p>Github</p></a>
-      </div>
-      <div class="footer_col">
-        <h4>Contact Us</h4>
-        <a>
-          <span class="fa-solid fa-map-location-dot"></span><a target="_blank" href="https://maps.app.goo.gl/bRVNgibnfRtsUBVS7"> 41, Kruis Street, Dikole  Section</a>
-          <hr>
-          <div class="ratio ratio-21x9">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.731697791002!2d28.0453634!3d-26.2054048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e991c034d5b%3A0x723373d72e258b10!2s41%20Kruis%20St%2C%20Dikole%20Section%2C%20Johannesburg%2C%202107!5e0!3m2!1sen!2sza!4v1721027664058!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <hr>
-        </a>
-        <p><span class="fa fa-envelope"></span><a href="mailto: lihlethornmagidigidi@gmail.com"></a> lihlethornmagidigidi@gmail.com</p>
-        <p><span class="fa fa-phone"></span><a href="tel: +27721486861"></a> (+277) 2148 6861</p>
-      </div>
-    </div>
-    <div class="footer_bar" id="footer-contact">
-      <div class="footer_bar_content">
-        <p>Copyright © 2024 Stellar Design Technologies. All rights reserved.</p>
-        <div class="footer_socials">
-          <a href="https://www.instagram.com" target="_blank">
-            <span><i class="fab fa-instagram"></i></span>
-        </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <span><i class="fab fa-facebook"></i></span>
-        </a>
-        <a href="https://www.twitter.com" target="_blank">
-            <span><i class="fab fa-twitter"></i></span>
-        </a>
-        <a href="mailto:lihlethornmagidigidi@gmail.com">
-            <span><i class="fas fa-envelope"></i></span>
-        </a>
+      <div class="row background align-items-center justify-content-center text-center">
+        <div class="col-md-6">
+          <img src="imgs/nioh_logo.fw_.png" class="img-fluid mx-auto d-block" alt="">
+        </div>
+        <div class="col-md-6">
+          <img src="imgs/AfrikaTikkun_logo-1.png" class="img-fluid mx-auto d-block" alt="">
         </div>
       </div>
-    </div>
-  </footer>
+    </section> -->
+
+    <footer class="footer" id="footer">
+      <div class="section footer_container" id="footer">
+        <div class="row">
+          <div class="footer_col col-md-3">
+            <center>
+              <a href="#topHeader"><img src="imgs/websiteLogo.png" class="img-fluid footer_logo" alt=""></a>
+            </center>
+          </div>
+          <div class="footer_col col-md-3">
+            <h3>Value</h3>
+            <a>
+              Whether you're a startup, small business, or established company looking to enhance your online presence, Stellar Design Technologies is here to help. Contact us today to schedule a consultation and learn more about how we can elevate your business with a stellar website.
+            </a>
+          </div>
+          <div class="footer_col col-md-3">
+            <h4>Quick Links</h4>
+            <a href="#about-us"><p>About Us</p></a>
+            <a href="#why-choose-us"><p>Why Choose Us</p></a>
+            <a href="#our-pricings"><p>Pricing</p></a>
+            <a href="services.html"><p>Services</p></a>
+            <a href="#contactForm"><p>Send Us a Query</p></a>
+          </div>
+          <div class="footer_col col-md-3">
+            <h4>Contact Us</h4>
+            <a>
+              <span class="fa-solid fa-map-location-dot"></span><a target="_blank" href="https://maps.app.goo.gl/bRVNgibnfRtsUBVS7"> 41, Kruis Street, Dikole  Section</a>
+              <hr>
+              <div class="ratio ratio-21x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.731697791002!2d28.0453634!3d-26.2054048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e991c034d5b%3A0x723373d72e258b10!2s41%20Kruis%20St%2C%20Dikole%20Section%2C%20Johannesburg%2C%202107!5e0!3m2!1sen!2sza!4v1721027664058!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <hr>
+            </a>
+            <p><span class="fa fa-envelope"></span><a href="mailto: lihlethornmagidigidi@gmail.com"></a> lihlethornmagidigidi@gmail.com</p>
+            <p><span class="fa fa-phone"></span><a href="tel: +27721486861"></a> (+277) 2148 6861</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer_bar" id="footer-contact">
+        <div class="row">
+          <div class="col-md-12 footerYear">
+            <div class="footer_bar_content">
+              <p>Copyright © 2024 Stellar Design Technologies. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer_socials">
+              <a href="https://www.instagram.com" target="_blank">
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <span><i class="fab fa-facebook"></i></span>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <span><i class="fab fa-twitter"></i></span>
+            </a>
+            <a href="mailto:lihlethornmagidigidi@gmail.com">
+                <span><i class="fas fa-envelope"></i></span>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
 </html>
